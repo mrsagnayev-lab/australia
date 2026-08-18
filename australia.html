@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Релокация в Австралию — Мадияр Сагнаев</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12181f;--paper:#f7f6f3;--card:#fff;--line:#dcd8d0;
+--muted:#6a6e75;--go:#2f6b4f;--stop:#9b2c2c;--amber:#8a6212;--signal:#1c4f8b;}
+.page{display:none}.page.active{display:block}
+nav.site{background:#12181f;position:sticky;top:0;z-index:50;box-shadow:0 1px 0 rgba(0,0,0,.2)}
+nav.site .inner{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;overflow-x:auto}
+nav.site button{background:none;border:0;padding:14px 16px;color:#9aa3ad;cursor:pointer;
+font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;
+letter-spacing:.09em;white-space:nowrap;border-bottom:2px solid transparent;transition:color .12s}
+nav.site button:hover{color:#fff}
+nav.site button.on{color:#fff;border-bottom-color:#fff}
+
+/* ===== strategy ===== */
+
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px 80px}
+
+/* HERO */
+header{border-bottom:2px solid var(--ink);padding:56px 0 28px;margin-bottom:44px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0 0 8px;font-weight:600;letter-spacing:-.02em}
+.thesis{font-size:clamp(17px,2.4vw,21px);color:var(--signal);font-weight:500;max-width:640px;margin:18px 0 0}
+
+/* CLOCK */
+.clock{display:flex;gap:0;margin-top:32px;border:1px solid var(--line);background:var(--card)}
+.clock div{flex:1;padding:16px 18px;border-right:1px solid var(--line)}
+.clock div:last-child{border-right:0}
+.clock .n{font-family:'IBM Plex Mono',monospace;font-size:24px;font-weight:600;display:block;line-height:1.2}
+.clock .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;display:block}
+
+/* SECTIONS */
+section{margin-bottom:52px}
+h2{font-size:13px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em;
+   color:var(--muted);font-weight:600;margin:0 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font-size:16px;margin:0 0 8px;font-weight:600}
+p{margin:0 0 14px}
+.lede{font-size:17px;max-width:680px}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--line);padding:22px 24px;margin-bottom:14px}
+.card.warn{border-left:3px solid var(--stop)}
+.card.note{border-left:3px solid var(--amber)}
+.card.ok{border-left:3px solid var(--go)}
+
+/* RULES */
+.rules{list-style:none;padding:0;margin:0;counter-reset:r}
+.rules li{counter-increment:r;background:var(--card);border:1px solid var(--line);padding:16px 20px 16px 58px;
+  position:relative;margin-bottom:8px;font-size:15px}
+.rules li::before{content:counter(r,decimal-leading-zero);position:absolute;left:20px;top:16px;
+  font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--signal);font-weight:600}
+.rules b{font-weight:600}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px}
+th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;
+   letter-spacing:.08em;color:var(--muted);padding:11px 14px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.rank{font-family:'IBM Plex Mono',monospace;color:var(--signal);font-weight:600}
+.out{color:var(--stop);font-weight:500}
+
+/* CHECKLIST */
+.check{list-style:none;padding:0;margin:0}
+.check li{background:var(--card);border:1px solid var(--line);margin-bottom:8px;padding:0}
+.check label{display:flex;gap:14px;padding:16px 20px;cursor:pointer;align-items:flex-start}
+.check input{margin:3px 0 0;width:17px;height:17px;flex:none;accent-color:var(--signal);cursor:pointer}
+.check .t{font-weight:600;font-size:15px;display:block}
+.check .d{font-size:13px;color:var(--muted);display:block;margin-top:3px}
+.check input:checked ~ .txt .t{text-decoration:line-through;color:var(--muted);font-weight:400}
+.urgent{border-left:3px solid var(--stop)!important}
+
+/* NUMBERS */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.pair{grid-template-columns:1fr}.clock{flex-wrap:wrap}.clock div{flex:1 1 50%;border-bottom:1px solid var(--line)}}
+
+.kv{font-family:'IBM Plex Mono',monospace;font-size:13px}
+.kv span{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted);font-family:'IBM Plex Mono',monospace}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+
+
+
+
+
+
+
+/* ===== map ===== */
+
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 60px}
+header{border-bottom:2px solid var(--ink);padding:44px 0 22px;margin-bottom:36px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+h1{font-size:clamp(26px,5vw,38px);margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.sub{font-size:16px;color:var(--signal);margin-top:12px;max-width:600px;font-weight:500}
+
+h2{font-size:12px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--muted);font-weight:600;margin:44px 0 16px;
+  padding-bottom:7px;border-bottom:1px solid var(--line)}
+
+/* ЗАКРЫТЫЕ ПУТИ */
+.dead{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--stop);
+  padding:16px 20px;margin-bottom:10px;position:relative}
+.dead .t{font-weight:600;font-size:15px;text-decoration:line-through;color:var(--muted)}
+.dead .why{font-size:13px;color:var(--stop);margin-top:5px;font-weight:500}
+.dead .src{font-size:11px;color:var(--muted);margin-top:6px;font-family:'IBM Plex Mono',monospace}
+
+/* ЖИВОЙ ПУТЬ — вертикальная лестница */
+.ladder{margin:0;padding:0;list-style:none;position:relative}
+.ladder::before{content:'';position:absolute;left:23px;top:24px;bottom:24px;
+  width:2px;background:var(--go)}
+.step{position:relative;padding:0 0 14px 62px;min-height:56px}
+.step .dot{position:absolute;left:14px;top:2px;width:20px;height:20px;border-radius:50%;
+  background:var(--go);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  font-weight:600;display:flex;align-items:center;justify-content:center;z-index:1}
+.step .box{background:var(--card);border:1px solid var(--line);padding:14px 18px}
+.step .t{font-weight:600;font-size:15px}
+.step .d{font-size:13px;color:var(--muted);margin-top:4px}
+.step .time{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--signal);
+  font-weight:600;margin-top:6px;display:block}
+.step.now .box{border-left:3px solid var(--signal)}
+.step.now .dot{background:var(--signal)}
+
+/* ОЧЕРЕДЬ ПРИОРИТЕТА */
+.queue{list-style:none;padding:0;margin:0;counter-reset:q}
+.queue li{counter-increment:q;background:var(--card);border:1px solid var(--line);
+  padding:12px 18px 12px 52px;position:relative;margin-bottom:6px;font-size:14px}
+.queue li::before{content:counter(q);position:absolute;left:18px;top:12px;
+  font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);font-weight:600}
+.queue li.you{border-left:3px solid var(--stop);background:#fdf8f7}
+.queue li.you::before{color:var(--stop)}
+.queue .tag{float:right;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  color:var(--stop);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.queue li.alt{border-left:3px solid var(--amber);background:#fdfbf5}
+.queue li.alt::before{color:var(--amber)}
+.queue .tag-alt{float:right;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  color:var(--amber);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+
+/* КОДЫ */
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px}
+th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--muted);padding:10px 14px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:11px 14px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+.code{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--signal)}
+.yes{color:var(--go);font-weight:600}
+.p5{color:var(--stop);font-weight:600}
+.p3{color:var(--amber);font-weight:600}
+
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--amber);
+  padding:16px 20px;margin-top:14px;font-size:14px}
+.note b{font-weight:600}
+footer{border-top:1px solid var(--line);margin-top:44px;padding-top:16px;
+  font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;line-height:1.7}
+@media(max-width:600px){.step{padding-left:52px}.ladder::before{left:19px}.step .dot{left:10px}}
+
+
+
+
+
+
+
+/* ===== compare ===== */
+
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 70px}
+
+header{border-bottom:2px solid var(--ink);padding:44px 0 22px;margin-bottom:32px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+h1{font-size:clamp(26px,5vw,38px);margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.sub{font-size:16px;color:var(--signal);margin-top:12px;max-width:640px;font-weight:500}
+
+h2{font-size:12px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--muted);font-weight:600;margin:48px 0 16px;
+  padding-bottom:7px;border-bottom:1px solid var(--line)}
+
+/* МАТРИЦА */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -20px;padding:0 20px}
+table.matrix{border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+  font-size:13px;min-width:1000px}
+table.matrix th{text-align:left;padding:12px 12px;border-bottom:2px solid var(--ink);
+  border-right:1px solid var(--line);vertical-align:top;font-weight:600;font-size:12px;line-height:1.35}
+table.matrix th.crit{width:150px;background:var(--paper);font-family:'IBM Plex Mono',monospace;
+  font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
+  position:sticky;left:0;z-index:2;border-right:2px solid var(--ink)}
+table.matrix th .num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--signal);
+  display:block;margin-bottom:3px;letter-spacing:.08em}
+table.matrix td{padding:10px 12px;border-bottom:1px solid var(--line);
+  border-right:1px solid var(--line);vertical-align:top;line-height:1.4}
+table.matrix td.crit{background:var(--paper);font-weight:600;font-size:12px;
+  position:sticky;left:0;z-index:1;border-right:2px solid var(--ink)}
+table.matrix tr:last-child td{border-bottom:0}
+.g{color:var(--go);font-weight:600}
+.r{color:var(--stop);font-weight:600}
+.a{color:var(--amber);font-weight:600}
+.q{color:var(--muted);font-style:italic}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:12px}
+.best{background:#f4f9f5}
+
+/* ЛЕСТНИЦЫ ШАГОВ */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:8px}
+.path{background:var(--card);border:1px solid var(--line);padding:18px 20px}
+.path.rec{border-left:3px solid var(--go)}
+.path.hard{border-left:3px solid var(--amber)}
+.path.no{border-left:3px solid var(--stop)}
+.path h3{font-size:14px;margin:0 0 4px;font-weight:600}
+.path .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--muted);display:block;margin-bottom:12px}
+.path ol{margin:0;padding-left:0;list-style:none;counter-reset:s}
+.path li{counter-increment:s;position:relative;padding:0 0 10px 26px;font-size:13px;line-height:1.4}
+.path li::before{content:counter(s);position:absolute;left:0;top:1px;width:17px;height:17px;
+  border-radius:50%;background:var(--paper);border:1px solid var(--line);
+  font-family:'IBM Plex Mono',monospace;font-size:10px;display:flex;
+  align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+.path li:last-child{padding-bottom:0}
+.path .yr{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--signal);font-weight:600}
+
+/* БАЗА ИСТОЧНИКОВ */
+.src{background:var(--card);border:1px solid var(--line);padding:16px 20px;margin-bottom:10px}
+.src h3{font-size:14px;margin:0 0 3px;font-weight:600}
+.src .url{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--signal);
+  word-break:break-all;display:block;margin-bottom:7px}
+.src .what{font-size:13px;color:var(--muted);line-height:1.45}
+.src .what b{color:var(--ink);font-weight:600}
+
+/* ИЗМЕНЕНИЯ */
+.chg{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--amber);
+  padding:14px 18px;margin-bottom:8px}
+.chg .date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--amber);
+  font-weight:600;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:4px}
+.chg .t{font-weight:600;font-size:14px;display:block;margin-bottom:3px}
+.chg .d{font-size:13px;color:var(--muted);line-height:1.45}
+.chg.bad{border-left-color:var(--stop)}
+.chg.bad .date{color:var(--stop)}
+.chg.good{border-left-color:var(--go)}
+.chg.good .date{color:var(--go)}
+
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--signal);
+  padding:15px 20px;margin-top:14px;font-size:14px;line-height:1.5}
+
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:16px;
+  font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;line-height:1.75}
+@media(max-width:700px){.paths{grid-template-columns:1fr}}
+
+
+
+
+
+
+
+/* ===== dama ===== */
+
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px 70px}
+
+/* НАВИГАЦИЯ МЕЖДУ СТРАНИЦАМИ */
+
+
+
+
+
+
+header{border-bottom:2px solid var(--ink);padding:40px 0 22px;margin-bottom:32px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+h1{font-size:clamp(26px,5vw,38px);margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.sub{font-size:17px;color:var(--signal);margin-top:14px;font-weight:500;max-width:620px}
+
+h2{font-size:12px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--muted);font-weight:600;margin:46px 0 16px;
+  padding-bottom:7px;border-bottom:1px solid var(--line)}
+h3{font-size:16px;margin:0 0 8px;font-weight:600}
+p{margin:0 0 14px}
+
+.card{background:var(--card);border:1px solid var(--line);padding:20px 24px;margin-bottom:12px}
+.card.key{border-left:3px solid var(--signal)}
+.card.warn{border-left:3px solid var(--stop)}
+.card.good{border-left:3px solid var(--go)}
+.card.note{border-left:3px solid var(--amber)}
+.card p:last-child{margin-bottom:0}
+
+.lede{font-size:17px;max-width:660px}
+
+/* ПРОСТОЕ ОБЪЯСНЕНИЕ */
+.plain{background:var(--card);border:1px solid var(--line);padding:22px 26px;margin-bottom:14px}
+.plain .q{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--signal);font-weight:600;display:block;margin-bottom:8px}
+.plain p{font-size:15px;margin-bottom:10px}
+.plain p:last-child{margin-bottom:0}
+
+/* ЦЕПОЧКА */
+.chain{list-style:none;padding:0;margin:0;counter-reset:c;position:relative}
+.chain::before{content:'';position:absolute;left:17px;top:20px;bottom:20px;width:2px;background:var(--line)}
+.chain li{counter-increment:c;position:relative;padding:0 0 12px 52px;min-height:44px}
+.chain li::before{content:counter(c);position:absolute;left:8px;top:0;width:20px;height:20px;
+  border-radius:50%;background:var(--ink);color:#fff;font-family:'IBM Plex Mono',monospace;
+  font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;z-index:1}
+.chain .box{background:var(--card);border:1px solid var(--line);padding:14px 18px}
+.chain .who{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--muted);display:block;margin-bottom:4px}
+.chain .who.you{color:var(--signal)}
+.chain .who.emp{color:var(--amber)}
+.chain .t{font-weight:600;font-size:15px;display:block}
+.chain .d{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.45}
+.chain .time{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--signal);
+  font-weight:600;margin-top:6px;display:block}
+
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px}
+th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--muted);padding:11px 14px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.g{color:var(--go);font-weight:600}
+.r{color:var(--stop);font-weight:600}
+.a{color:var(--amber);font-weight:600}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:13px}
+
+.reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.reg .r-card{background:var(--card);border:1px solid var(--line);padding:16px 18px}
+.reg h4{font-size:14px;margin:0 0 4px;font-weight:600}
+.reg .url{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--signal);
+  word-break:break-all;display:block;margin-bottom:6px;line-height:1.4}
+.reg .d{font-size:12px;color:var(--muted);line-height:1.45}
+
+.src{background:var(--card);border:1px solid var(--line);padding:15px 20px;margin-bottom:10px}
+.src h3{font-size:14px;margin:0 0 3px}
+.src .url{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--signal);
+  word-break:break-all;display:block;margin-bottom:6px}
+.src .what{font-size:13px;color:var(--muted);line-height:1.45}
+
+ul.plain-list{margin:0;padding-left:20px;font-size:14px}
+ul.plain-list li{margin-bottom:7px}
+
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:16px;
+  font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;line-height:1.75}
+
+
+/* ===== points / spouse ===== */
+.calc{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px}
+.calc th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;
+letter-spacing:.07em;color:var(--muted);padding:11px 14px;border-bottom:1px solid var(--line);font-weight:600}
+.calc td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.calc tr:last-child td{border-bottom:0}
+.calc .pts{font-family:'IBM Plex Mono',monospace;font-weight:600;text-align:right;width:70px}
+.calc tr.total td{background:var(--paper);font-weight:700;border-top:2px solid var(--ink)}
+.calc tr.total .pts{font-size:17px}
+.calc .now{color:var(--stop)}
+.calc .max{color:var(--go)}
+.gauge{background:var(--card);border:1px solid var(--line);padding:20px 24px;margin-bottom:14px}
+.gauge .bar{height:26px;background:#eceae6;position:relative;margin:14px 0 8px;border:1px solid var(--line)}
+.gauge .fill{position:absolute;left:0;top:0;bottom:0;background:var(--signal)}
+.gauge .zone{position:absolute;top:0;bottom:0;background:rgba(47,107,79,.16);border-left:2px solid var(--go);border-right:2px solid var(--go)}
+.gauge .lbl{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;
+font-size:11px;color:var(--muted)}
+.gauge h3{margin:0 0 2px}
+.step2{list-style:none;padding:0;margin:0;counter-reset:sp;position:relative}
+.step2::before{content:'';position:absolute;left:17px;top:20px;bottom:20px;width:2px;background:var(--line)}
+.step2 li{counter-increment:sp;position:relative;padding:0 0 12px 52px;min-height:44px}
+.step2 li::before{content:counter(sp);position:absolute;left:8px;top:0;width:20px;height:20px;border-radius:50%;
+background:var(--ink);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
+display:flex;align-items:center;justify-content:center;z-index:1}
+.step2 .box{background:var(--card);border:1px solid var(--line);padding:14px 18px}
+.step2 .t{font-weight:600;font-size:15px;display:block}
+.step2 .d{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.45}
+.step2 .time{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--signal);font-weight:600;margin-top:6px;display:block}
+.fork{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px}
+.fork .f{background:var(--card);border:1px solid var(--line);padding:18px 20px}
+.fork .f.a{border-left:3px solid var(--go)}
+.fork .f.b{border-left:3px solid var(--amber)}
+.fork h4{margin:0 0 6px;font-size:15px}
+.fork .pt{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;color:var(--signal);display:block;margin-bottom:8px}
+.fork p{font-size:13px;margin:0 0 8px;line-height:1.45}
+.fork p:last-child{margin:0}
+</style>
+</head>
+<body>
+<nav class="site"><div class="inner"><button data-p="strategy" class="on">Стратегия</button><button data-p="map">Карта путей</button><button data-p="compare">Сравнение</button><button data-p="dama">DAMA</button><button data-p="points">Баллы 190</button><button data-p="spouse">План жены</button></div></nav>
+<div class="wrap">
+<section class="page" id="p-strategy">
+
+
+<header>
+  <div class="eyebrow">Стратегия релокации · обновлено 18.07.2026</div>
+  <h1>Мадияр Сагнаев</h1>
+  <div class="kv"><span>38 лет · Казахстан · семья 4 чел. · Head of Materials Procurement, ERG</span></div>
+  <p class="thesis">Задача сузилась с «как мигрировать» до «как получить оффер». Всё остальное — визы, баллы, схемы — включается автоматически после оффера.</p>
+
+  <div class="clock">
+    <div><span class="n">38</span><span class="l">лет сейчас</span></div>
+    <div><span class="n">40</span><span class="l">порог баллов</span></div>
+    <div><span class="n">18–24</span><span class="l">мес. окно</span></div>
+    <div><span class="n">£40k</span><span class="l">мин. оффер</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>Что я продаю</h2>
+  <p class="lede">Не «казахстанский закупщик». Комбинация, которая редка на любом рынке:</p>
+  <div class="card">
+    <p style="margin:0">MSc Warwick с отличием · MCIPS · 10+ лет в тяжёлой промышленности · управление командой 50 человек · контракт с General Electric на $900M · преподавание SCM для 240+ студентов · SAP S/4HANA</p>
+  </div>
+  <div class="card note">
+    <h3>Слабость — не квалификация, а география</h3>
+    <p style="margin:0">Работодатель должен захотеть возиться с визой. Именно это, а не резюме, является узким местом.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Твёрдые условия</h2>
+  <ol class="rules">
+    <li><b>Учиться не буду.</b> Никаких магистратур, PhD, исследовательских программ. Пути через учёбу исключены полностью.</li>
+    <li><b>Без оффера не перееду.</b> Только подписанный контракт. Переезд «по ПМЖ и поиск на месте» исключён.</li>
+    <li><b>Английский поднимаю.</b> Цель IELTS 8.0 / PTE 79+, не ниже 7.0 по каждому компоненту.</li>
+    <li><b>Отрасль не ограничена mining.</b> Любая индустрия с procurement: FMCG, retail, pharma, manufacturing, utilities, tech, госсектор.</li>
+    <li><b>Академия допускается</b> при соответствии зарплате: Lecturer, Teaching Fellow, Industry Fellow, Professor of Practice.</li>
+    <li><b>Понижение принимается.</b> Любая позиция ради входа на рынок.</li>
+    <li><b>Remote-этап подходит.</b> Работа на зарубежную компанию из Казахстана до переезда.</li>
+    <li><b>Цель — ПМЖ и гражданство.</b> Не временная работа.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Параметры оффера</h2>
+  <div class="pair">
+    <div class="card"><h3>£40 000 минимум</h3><p style="margin:0;font-size:14px;color:var(--muted)">≈ AUD 78 000 · CAD 68 000. Курсы проверять на дату.</p></div>
+    <div class="card"><h3>Один доход на четверых</h3><p style="margin:0;font-size:14px;color:var(--muted)">Жена работать не будет. Дети 12 и 5 лет, школа и садик на английском.</p></div>
+  </div>
+  <div class="card warn">
+    <h3>Главный конфликт в позиции</h3>
+    <p style="margin:0">Требование £40 000 и готовность на любое понижение несовместимы. Должности, куда легче всего войти со спонсорством, платят меньше порога. Практический вывод: искать <b>средний уровень в недорогой локации</b> — Перт, а не Сидней; Абердин или Манчестер, а не Лондон; Калгари, а не Торонто.</p>
+  </div>
+</section>
+
+<section>
+  <h2>География</h2>
+  <table>
+    <tr><th>Место</th><th>Механизм</th><th>До ПМЖ</th><th>Обоснование</th></tr>
+    <tr><td class="rank">01 Австралия<br><span style="color:var(--muted);font-size:12px">Перт / WA</span></td><td>482 → 186</td><td>3–5 лет</td><td>Единственный рынок с прямой конвертацией отраслевого опыта</td></tr>
+    <tr><td class="rank">02 Канада</td><td>Оффер + Express Entry</td><td>1–3 года</td><td>Гражданство за 3 года — быстрее всех</td></tr>
+    <tr><td class="rank">03 UK</td><td>Skilled Worker → ILR</td><td>5 лет + ILR</td><td>Warwick и MCIPS дают совпадение по квалификации</td></tr>
+    <tr><td class="rank">04 Н. Зеландия</td><td>Skilled Migrant</td><td>2–3 года</td><td>Резерв</td></tr>
+    <tr><td class="out">— GCC</td><td>Только работа</td><td class="out">не существует</td><td>Исключено как цель релокации. Допустимо только как финансовый буфер</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Действия</h2>
+  <ul class="check">
+    <li class="urgent"><label><input type="checkbox" data-k="mcips"><span class="txt"><span class="t">Продлить MCIPS</span><span class="d">Истёк 01.07.2026. Задача на неделю. Восстановление после перерыва дороже продления.</span></span></label></li>
+    <li class="urgent"><label><input type="checkbox" data-k="ielts"><span class="txt"><span class="t">Записаться на IELTS / PTE</span><span class="d">Сейчас 6.5. Цель 8.0 / 79+. Без этого возрастной штраф ничем не компенсировать.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="refs"><span class="txt"><span class="t">Собрать reference letters</span><span class="d">ERG и предыдущие работодатели, с описанием обязанностей под ANZSCO 133612.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="cv"><span class="txt"><span class="t">Выровнять должность во всех документах</span><span class="d">В CV «Head of Procurement», в профиле «Head of Materials Procurement». Формулировка должна совпадать везде.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="mit"><span class="txt"><span class="t">Уточнить статус MITx MicroMasters</span><span class="d">В CV указан 2026. Если не завершён — пометить «in progress», иначе риск при проверке.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="jobs"><span class="txt"><span class="t">Запустить мониторинг вакансий</span><span class="d">Seek, LinkedIn, порталы BHP / Rio Tinto / Fortescue / Woodside. Плюс Skilled Migrant Employment Register (WA).</span></span></label></li>
+    <li><label><input type="checkbox" data-k="remote"><span class="txt"><span class="t">Искать remote-позиции</span><span class="d">Промежуточный шаг: зарубежный работодатель до физического переезда.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="skills"><span class="txt"><span class="t">Skills assessment (можно отложить)</span><span class="d">VETASSESS, ANZSCO 133612. 3–6 месяцев. Имеет смысл когда появится конкретный работодатель.</span></span></label></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Сроки</h2>
+  <div class="card note">
+    <h3>Октябрь 2026 нереалистичен для физического переезда</h3>
+    <p style="margin:0">От оффера до переезда 3–6 месяцев: виза, skills assessment, школа. До октября осталось три месяца. Практично: <b>октябрь 2026 — дата готовности к remote-старту</b>, физический переезд — 2027.</p>
+  </div>
+  <div class="card">
+    <h3>Ребёнок 12 лет</h3>
+    <p style="margin:0">Переезд в 13–14 лет — самый тяжёлый возраст для адаптации и языка. Аргумент в пользу скорости; вопрос для отдельного разговора с семьёй, вне логистики.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Что откладывать нельзя, а что можно</h2>
+  <div class="pair">
+    <div class="card ok"><h3>Сейчас</h3><p style="margin:0;font-size:14px">MCIPS · экзамен по английскому · качество отклика. Три вещи под личным контролем.</p></div>
+    <div class="card"><h3>Потом</h3><p style="margin:0;font-size:14px">Skills assessment · выбор страны · изучение виз. Имеют смысл только при конкретном работодателе.</p></div>
+  </div>
+</section>
+
+<footer>Данные по визовым правилам требуют проверки на официальных источниках перед решениями.</footer>
+
+
+</section>
+<section class="page" id="p-map">
+
+
+<header>
+  <div class="eyebrow">Австралия · проверено по immi.homeaffairs.gov.au · 17.08.2026</div>
+  <h1>Один путь из четырёх</h1>
+  <p class="sub">Три маршрута закрыты жёстко — не «сложно», а по формальным основаниям. Остался один, и он держится целиком на оффере.</p>
+</header>
+
+<h2>Закрыто</h2>
+
+<div class="dead">
+  <div class="t">485 Temporary Graduate — учёба → работа</div>
+  <div class="why">Возраст 35 лет максимум на момент подачи. Вам 38.</div>
+  <div class="src">immi.homeaffairs.gov.au / Subclass 485 / Basic Eligibility</div>
+</div>
+
+<div class="dead">
+  <div class="t">189 Skilled Independent — по баллам без спонсора</div>
+  <div class="why">Возрастные баллы падают после 32. Реальный проходной 85–95 при формальном минимуме 65.</div>
+  <div class="src">Points test + конкуренция 2026</div>
+</div>
+
+<div class="dead">
+  <div class="t">491 — региональная номинация</div>
+  <div class="why">Даёт +15 баллов, но требует жить вне Перта. Решение: Перт.</div>
+  <div class="src">Points-tested · регионы WA</div>
+</div>
+
+<div class="dead">
+  <div class="t">Любая учёба в Австралии как путь к визе</div>
+  <div class="why">Без 485 диплом не конвертируется в право остаться и работать. Цепочка рвётся.</div>
+  <div class="src">Следствие из закрытия 485</div>
+</div>
+
+<h2>Открыто — основной маршрут</h2>
+
+<ul class="ladder">
+  <li class="step now">
+    <span class="dot">1</span>
+    <div class="box">
+      <span class="t">Подготовка</span>
+      <span class="d">MCIPS · PTE 79+ · CV под рынок · профили в агентствах</span>
+      <span class="time">вы здесь</span>
+    </div>
+  </li>
+  <li class="step">
+    <span class="dot">2</span>
+    <div class="box">
+      <span class="t">Оффер от австралийского работодателя</span>
+      <span class="d">Единственное узкое место. Всё остальное — следствие.</span>
+      <span class="time">срок неизвестен — зависит от рынка</span>
+    </div>
+  </li>
+  <li class="step">
+    <span class="dot">3</span>
+    <div class="box">
+      <span class="t">Работодатель: sponsorship + nomination</span>
+      <span class="d">Два шага делает компания, не вы</span>
+    </div>
+  </li>
+  <li class="step">
+    <span class="dot">4</span>
+    <div class="box">
+      <span class="t">482 Skills in Demand — Core Skills stream</span>
+      <span class="d">Возраста в требованиях нет. Семья включена в заявку.</span>
+      <span class="time">медиана 21 рабочий день для decision-ready · но вы в 5-й очереди</span>
+    </div>
+  </li>
+  <li class="step">
+    <span class="dot">5</span>
+    <div class="box">
+      <span class="t">Работа у спонсора</span>
+      <span class="d">Виза до 4 лет. Жена — право работать, дети — школа.</span>
+      <span class="time">2–3 года</span>
+    </div>
+  </li>
+  <li class="step">
+    <span class="dot">6</span>
+    <div class="box">
+      <span class="t">186 ENS — Transition Pathway</span>
+      <span class="d">Профессию заново не проверяют — наследуется с 482</span>
+      <span class="time">6–10 месяцев</span>
+    </div>
+  </li>
+  <li class="step">
+    <span class="dot">7</span>
+    <div class="box">
+      <span class="t">ПМЖ → гражданство</span>
+      <span class="time">+4 года резидентства</span>
+    </div>
+  </li>
+</ul>
+
+<h2>Открыто — второй маршрут, параллельно</h2>
+
+<div class="card good">
+  <h3>190 Skilled Nominated — по баллам, без работодателя</h3>
+  <p>Раньше я отнёс этот путь к закрытым, посчитав только возрастную потерю. Полный расчёт показывает другое: со Superior English, партнёрскими баллами и номинацией WA выходит <b>90 баллов</b> при проходном 85–95.</p>
+  <p style="margin-bottom:0">Не заменяет поиск работодателя, а дополняет его. Подача EOI бесплатна и ничему не мешает — профиль лежит в системе, пока вы ищете оффер. Детали и расчёт — на вкладке <b>Баллы 190</b>.</p>
+</div>
+
+<h2>Очередь обработки — Ministerial Direction 119 (с 25.07.2026)</h2>
+
+<ul class="queue">
+  <li>Law enforcement / defence — <b>в Австралии</b></li>
+  <li>Law enforcement / defence — вне Австралии</li>
+  <li class="alt">Construction, healthcare, <b>teaching</b> — в Австралии <span class="tag-alt">ваш второй код</span></li>
+  <li>Всё остальное — в Австралии</li>
+  <li class="you">Всё остальное — вне Австралии <span class="tag">вы здесь</span></li>
+</ul>
+
+<div class="note">
+  <b>Что это значит.</b> Приоритет влияет на срок рассмотрения, не на возможность получить визу. Вы допущены — но вас рассматривают последними.
+</div>
+
+<h2>Ваши коды ANZSCO — оба в Core Skills Occupation List</h2>
+
+<table>
+  <tr><th>Код</th><th>Профессия</th><th>В CSOL</th><th>Приоритет MD 119</th></tr>
+  <tr>
+    <td class="code">133612</td>
+    <td>Procurement Manager<br><span style="font-size:12px;color:var(--muted)">основной</span></td>
+    <td class="yes">Да, №23</td>
+    <td class="p5">5-й</td>
+  </tr>
+  <tr>
+    <td class="code">133611</td>
+    <td>Supply and Distribution Manager<br><span style="font-size:12px;color:var(--muted)">«логистика»</span></td>
+    <td class="yes">Да, №22</td>
+    <td class="p5">5-й</td>
+  </tr>
+  <tr>
+    <td class="code">242111</td>
+    <td>University Lecturer<br><span style="font-size:12px;color:var(--muted)">опыт в MNU с 2023</span></td>
+    <td class="yes">Да, №164</td>
+    <td class="p3">3–4-й</td>
+  </tr>
+  <tr>
+    <td class="code">511111</td>
+    <td>Contract Administrator<br><span style="font-size:12px;color:var(--muted)">запасной</span></td>
+    <td class="yes">Да, №447</td>
+    <td class="p5">5-й</td>
+  </tr>
+  <tr>
+    <td class="code">224714</td>
+    <td>Supply Chain Analyst<br><span style="font-size:12px;color:var(--muted)">запасной</span></td>
+    <td class="yes">Да, №80</td>
+    <td class="p5">5-й</td>
+  </tr>
+</table>
+
+<div class="note">
+  <b>Логистика не даёт преимущества.</b> 133611 и 133612 — соседние коды одной группы 1336, одинаковый статус, одинаковый приоритет. Смена кода только создаст расхождение с реальным опытом на skills assessment.
+  <br><br>
+  <b>А вот 242111 — даёт.</b> Teaching в третьей приоритетной группе вместо пятой. Требует проверки: нужен ли PhD, кто делает skills assessment, есть ли реальные вакансии со спонсорством.
+</div>
+
+<footer>
+  Источники: immi.homeaffairs.gov.au — Subclass 485 Basic Eligibility · Ministerial Direction 119 (в силе с 25.07.2026) · Core Skills Occupation List (PDF) · Skilled visa processing priorities<br>
+  Сроки обработки — медианы Home Affairs для decision-ready заявок; для 5-й очереди могут быть существенно дольше.<br>
+  Проверять на первоисточнике перед любым решением.
+</footer>
+
+
+</section>
+<section class="page" id="p-compare">
+
+
+<header>
+  <div class="eyebrow">Австралия · сравнение путей · проверено 17.08.2026</div>
+  <h1>Шесть путей, один критерий</h1>
+  <p class="sub">Все пути ведут к 186 (ПМЖ). Разница — в скорости, цене и в том, что нужно сделать до того, как появится работодатель.</p>
+</header>
+
+<h2>Матрица сравнения</h2>
+
+<div class="scroll">
+<table class="matrix">
+  <tr>
+    <th class="crit">Критерий</th>
+    <th class="best"><span class="num">01</span>Прямой<br>Procurement</th>
+    <th><span class="num">02</span>Прямой<br>Lecturer</th>
+    <th><span class="num">03</span>MPhil →<br>Procurement</th>
+    <th><span class="num">04</span>MPhil →<br>Lecturer</th>
+    <th><span class="num">05</span>WA DAMA<br>Procurement</th>
+    <th><span class="num">06</span>PhD →<br>любая</th>
+  </tr>
+
+  <tr>
+    <td class="crit">Нужна учёба</td>
+    <td class="best"><span class="g">Нет</span></td>
+    <td><span class="g">Нет</span></td>
+    <td><span class="r">2 года</span></td>
+    <td><span class="r">2 года</span></td>
+    <td><span class="g">Нет</span></td>
+    <td><span class="r">3–4 года</span></td>
+  </tr>
+
+  <tr>
+    <td class="crit">Оффер нужен заранее</td>
+    <td class="best"><span class="r">Да</span></td>
+    <td><span class="r">Да</span></td>
+    <td><span class="g">Нет</span><br><span class="q">после учёбы</span></td>
+    <td><span class="g">Нет</span></td>
+    <td><span class="r">Да</span></td>
+    <td><span class="g">Нет</span></td>
+  </tr>
+
+  <tr>
+    <td class="crit">Возрастной барьер</td>
+    <td class="best"><span class="g">Нет</span><br><span class="q">482 без лимита</span></td>
+    <td><span class="g">Нет</span></td>
+    <td><span class="g">485 до 49</span></td>
+    <td><span class="g">485 до 49</span></td>
+    <td><span class="g">186 до 55</span></td>
+    <td><span class="g">485 до 49</span></td>
+  </tr>
+
+  <tr>
+    <td class="crit">Приоритет MD 119</td>
+    <td class="best"><span class="r">5-й</span><br><span class="q">вне Австралии</span></td>
+    <td><span class="r">5-й</span><br><span class="q">teaching только onshore</span></td>
+    <td><span class="a">4-й</span><br><span class="q">будете onshore</span></td>
+    <td><span class="g">3-й</span><br><span class="q">teaching + onshore</span></td>
+    <td><span class="r">5-й</span></td>
+    <td><span class="g">3–4-й</span></td>
+  </tr>
+
+  <tr>
+    <td class="crit">Мин. зарплата</td>
+    <td class="best mono">AUD 79 500<br><span class="q">CSIT</span></td>
+    <td class="mono">AUD 79 500</td>
+    <td class="mono">AUD 79 500</td>
+    <td class="mono">AUD 79 500</td>
+    <td class="mono">TSMIT<br><span class="q">концессия?</span></td>
+    <td class="mono">AUD 79 500</td>
+  </tr>
+
+  <tr>
+    <td class="crit">Английский</td>
+    <td class="best">IELTS 5.0 (482)<br>6.0 (186)</td>
+    <td>6.0+<br><span class="q">де-факто выше</span></td>
+    <td>6.5 для учёбы</td>
+    <td>6.5 для учёбы</td>
+    <td>Skill Level 1 —<br><span class="r">концессии нет</span></td>
+    <td>6.5 для учёбы</td>
+  </tr>
+
+  <tr>
+    <td class="crit">Нужен PhD</td>
+    <td class="best"><span class="g">Нет</span></td>
+    <td><span class="r">Как правило да</span></td>
+    <td><span class="g">Нет</span></td>
+    <td><span class="a">Часто да</span></td>
+    <td><span class="g">Нет</span></td>
+    <td><span class="g">Будет</span></td>
+  </tr>
+
+  <tr>
+    <td class="crit">Доход в процессе</td>
+    <td class="best"><span class="g">Полный</span></td>
+    <td><span class="g">Полный</span></td>
+    <td><span class="a">RTP-стипендия<br>+ 8 ч/нед</span></td>
+    <td><span class="a">RTP-стипендия</span></td>
+    <td><span class="g">Полный</span></td>
+    <td><span class="a">RTP-стипендия</span></td>
+  </tr>
+
+  <tr>
+    <td class="crit">До первой визы</td>
+    <td class="best mono">3–6 мес<br><span class="q">после оффера</span></td>
+    <td class="mono">3–6 мес</td>
+    <td class="mono">~6 мес<br><span class="q">студ. виза</span></td>
+    <td class="mono">~6 мес</td>
+    <td class="mono">6–9 мес<br><span class="q">+ эндорсмент</span></td>
+    <td class="mono">~6 мес</td>
+  </tr>
+
+  <tr>
+    <td class="crit">До ПМЖ</td>
+    <td class="best mono">3–4 года</td>
+    <td class="mono">3–4 года</td>
+    <td class="mono">6–8 лет</td>
+    <td class="mono">6–8 лет</td>
+    <td class="mono">3 года Перт<br>2 года регион</td>
+    <td class="mono">8–10 лет</td>
+  </tr>
+
+  <tr>
+    <td class="crit">Возраст на ПМЖ</td>
+    <td class="best mono">41–42</td>
+    <td class="mono">41–42</td>
+    <td class="mono">44–46</td>
+    <td class="mono">44–46</td>
+    <td class="mono">41–42</td>
+    <td class="mono">46–48</td>
+  </tr>
+
+  <tr>
+    <td class="crit">Профессия в списке</td>
+    <td class="best"><span class="g">133612 в CSOL</span></td>
+    <td><span class="g">242111 в CSOL</span></td>
+    <td><span class="g">Да</span></td>
+    <td><span class="g">Да</span></td>
+    <td class="q">Требует<br>проверки</td>
+    <td><span class="g">Да</span></td>
+  </tr>
+
+  <tr>
+    <td class="crit">Семья</td>
+    <td class="best">Жена работает,<br>дети школа</td>
+    <td>То же</td>
+    <td>На студ. визе<br>ограничения</td>
+    <td>То же</td>
+    <td>Жена работает</td>
+    <td>Ограничения</td>
+  </tr>
+
+  <tr>
+    <td class="crit">Главный риск</td>
+    <td class="best">Оффер может<br>не найтись</td>
+    <td>Вакансий мало,<br>спонсорство редко</td>
+    <td>2 года без<br>дохода</td>
+    <td>PhD-барьер<br>на выходе</td>
+    <td>Работодатель<br>должен пройти<br>эндорсмент</td>
+    <td>4 года,<br>возраст 46+</td>
+  </tr>
+
+  <tr>
+    <td class="crit">Стоимость</td>
+    <td class="best"><span class="g">Низкая</span><br><span class="q">визы ~$10k</span></td>
+    <td><span class="g">Низкая</span></td>
+    <td><span class="a">Средняя</span><br><span class="q">если RTP</span></td>
+    <td><span class="a">Средняя</span></td>
+    <td><span class="g">Низкая</span></td>
+    <td><span class="a">Средняя</span></td>
+  </tr>
+</table>
+</div>
+
+<div class="note" style="border-left:3px solid var(--go)">
+  <b>Плюс седьмой вариант — 190 по баллам.</b> Он не в матрице, потому что устроен иначе: не требует работодателя вообще и ведётся <b>параллельно</b> любому из шести путей выше. Подача EOI бесплатна. Расчёт — вкладка «Баллы 190».
+</div>
+
+<div class="note">
+  <b>Как читать.</b> Пути 1 и 5 — самые быстрые и дешёвые, но упираются в готовность работодателя. Пути 3, 4, 6 обходят это: вы приезжаете сами, затем ищете работу изнутри, что поднимает приоритет и снимает главное возражение «кандидат за границей». Цена — годы и доход.
+</div>
+
+<h2>Шаги по каждому пути</h2>
+
+<div class="paths">
+
+  <div class="path rec">
+    <h3>01 · Прямой Procurement</h3>
+    <span class="tag">482 → 186 TRT · базовый</span>
+    <ol>
+      <li>MCIPS, PTE, CV, агентства <span class="yr">3–6 мес</span></li>
+      <li>Оффер от работодателя WA <span class="yr">?</span></li>
+      <li>Работодатель: sponsorship + nomination</li>
+      <li>482 Core Skills <span class="yr">1–5 мес</span></li>
+      <li>Работа у спонсора <span class="yr">2–3 года</span></li>
+      <li>186 Transition Pathway <span class="yr">6–10 мес</span></li>
+      <li>ПМЖ → гражданство <span class="yr">+4 года</span></li>
+    </ol>
+  </div>
+
+  <div class="path hard">
+    <h3>02 · Прямой Lecturer</h3>
+    <span class="tag">242111 · университет-спонсор</span>
+    <ol>
+      <li>Усилить академический профиль</li>
+      <li>Оффер от университета <span class="yr">редко</span></li>
+      <li>Университет спонсирует 482</li>
+      <li>482 <span class="yr">1–5 мес</span></li>
+      <li>Работа <span class="yr">2–3 года</span></li>
+      <li>186 TRT <span class="yr">6–10 мес</span></li>
+    </ol>
+  </div>
+
+  <div class="path hard">
+    <h3>03 · MPhil → Procurement</h3>
+    <span class="tag">Master by Research · 485</span>
+    <ol>
+      <li>Поступление + RTP-стипендия <span class="yr">6–12 мес</span></li>
+      <li>Студенческая виза 500 <span class="yr">~6 мес</span></li>
+      <li>MPhil в Австралии <span class="yr">2 года</span></li>
+      <li>485 Post-Higher Education <span class="yr">до 49 лет</span></li>
+      <li>Поиск работы изнутри <span class="yr">2 года</span></li>
+      <li>482 или сразу 186 <span class="yr">4-й приоритет</span></li>
+      <li>ПМЖ <span class="yr">возраст 44–46</span></li>
+    </ol>
+  </div>
+
+  <div class="path hard">
+    <h3>04 · MPhil → Lecturer</h3>
+    <span class="tag">лучший приоритет · 3-й</span>
+    <ol>
+      <li>Поступление + RTP <span class="yr">6–12 мес</span></li>
+      <li>Студенческая виза <span class="yr">~6 мес</span></li>
+      <li>MPhil <span class="yr">2 года</span></li>
+      <li>485 <span class="yr">2 года</span></li>
+      <li>Оффер от университета изнутри</li>
+      <li>482/186 как teaching + onshore <span class="yr">3-й приоритет</span></li>
+    </ol>
+  </div>
+
+  <div class="path rec">
+    <h3>05 · WA DAMA</h3>
+    <span class="tag">возраст до 55 · опыт от 1 года</span>
+    <ol>
+      <li>Найти работодателя в WA</li>
+      <li>Работодатель регистрируется в SMER</li>
+      <li>Эндорсмент от Migration Services <span class="yr">20 раб. дней</span></li>
+      <li>Labour Agreement с Home Affairs</li>
+      <li>482 под DAMA <span class="yr">опыт от 1 года</span></li>
+      <li>Работа <span class="yr">3 года Перт / 2 регион</span></li>
+      <li>186 ENS <span class="yr">до 55 лет</span></li>
+    </ol>
+  </div>
+
+  <div class="path no">
+    <h3>06 · PhD → любая</h3>
+    <span class="tag">максимальный срок</span>
+    <ol>
+      <li>Поступление + стипендия <span class="yr">6–12 мес</span></li>
+      <li>Студенческая виза <span class="yr">~6 мес</span></li>
+      <li>PhD <span class="yr">3–4 года</span></li>
+      <li>485 <span class="yr">2 года</span></li>
+      <li>Работа + 482/186</li>
+      <li>ПМЖ <span class="yr">возраст 46–48</span></li>
+    </ol>
+  </div>
+
+</div>
+
+<h2>Изменения 2025–2026 — что уже вступило в силу</h2>
+
+<div class="chg bad">
+  <span class="date">1 июля 2024</span>
+  <span class="t">485: возрастной лимит снижен с 50 до 35 лет</span>
+  <span class="d">Исключения — только Master by Research, PhD (до 49) и держатели паспортов Hong Kong SAR / BNO (до 49). Исключений по штатам не существует: 485 — федеральная виза.</span>
+</div>
+
+<div class="chg bad">
+  <span class="date">7 декабря 2024</span>
+  <span class="t">482 TSS заменена на Skills in Demand (SID)</span>
+  <span class="d">Единый порог TSMIT разделён на два: CSIT (Core Skills) и SSIT (Specialist Skills). Введена трёхпоточная структура.</span>
+</div>
+
+<div class="chg bad">
+  <span class="date">1 июля 2026</span>
+  <span class="t">CSIT поднят до AUD 79 423 / 79 499</span>
+  <span class="d">Было 76 515. Источники расходятся на 76 долларов — перед подачей уточнять. SSIT: 146 576 / 146 717. Индексация по AWOTE, +3,9%. Superannuation и бонусы в порог не засчитываются. Номинация не одобряется при зарплате ниже порога, независимо от рыночной ставки.</span>
+</div>
+
+<div class="chg bad">
+  <span class="date">25 июля 2026</span>
+  <span class="t">Ministerial Direction 119 заменила MD 105</span>
+  <span class="d">Впервые 482 полностью подпадает под приоритеты. Пять уровней: law enforcement/defence → construction/healthcare/teaching (только onshore) → все остальные onshore → все остальные offshore. Региональность и статус аккредитованного спонсора больше не дают приоритета. Применяется ко всем заявкам, включая уже поданные.</span>
+</div>
+
+<div class="chg">
+  <span class="date">3 июля 2026</span>
+  <span class="t">Goldfields DAMA продлена до 31 декабря 2026</span>
+  <span class="d">Подтверждено Commonwealth Government.</span>
+</div>
+
+<h2>База источников</h2>
+
+<div class="src">
+  <h3>Департамент внутренних дел Австралии — визы</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing</span>
+  <span class="what">Главный первоисточник. Требования по каждой визе отдельно. <b>Проверять здесь всё</b> — правила одной визы не переносятся на другую.</span>
+</div>
+
+<div class="src">
+  <h3>Сроки обработки виз</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times</span>
+  <span class="what">Интерактивный инструмент. Выбрать Visa Type → Visa Stream → Application Date. Для 482 — Core Skills. Для 186 — <b>Direct Entry</b> (с нуля) или <b>Transition</b> (переход с 482). Обновляется ежемесячно.</span>
+</div>
+
+<div class="src">
+  <h3>Приоритеты обработки — MD 119</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/skilled-visa</span>
+  <span class="what">Пять уровней приоритета. Текст самой директивы: <b>immi.homeaffairs.gov.au/Visa-subsite/files/md-119.pdf</b></span>
+</div>
+
+<div class="src">
+  <h3>Core Skills Occupation List (CSOL)</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/Documents/core-sol.pdf</span>
+  <span class="what">Прямой PDF, 456 профессий. <b>133612 Procurement Manager — №23. 133611 Supply and Distribution — №22. 242111 University Lecturer — №164. 511111 Contract Administrator — №447. 224714 Supply Chain Analyst — №80.</b></span>
+</div>
+
+<div class="src">
+  <h3>Списки профессий — все визы</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list</span>
+  <span class="what">Ключевой факт: <b>186 TRT не имеет списка профессий</b> — код наследуется с 482. Для 186 и 482 используется ANZSCO 2022, для остальных — 2013.</span>
+</div>
+
+<div class="src">
+  <h3>Migration WA — DAMA Западной Австралии</h3>
+  <span class="url">https://migration.wa.gov.au/our-services-support/designated-area-migration-agreement</span>
+  <span class="what">Возраст до 55, опыт от 1 года для 482. Фильтр профессий внизу страницы + <b>Download CSV</b>. Эндорсмент бесплатный, обработка 20 рабочих дней. Перт — постиндексы 6000–6038, 6050–6083, 6090–6182, 6208–6211, 6214, 6556–6558.</span>
+</div>
+
+<div class="src">
+  <h3>Northern Territory — номинация 190 для 35+</h3>
+  <span class="url">https://australiasnorthernterritory.com.au/move/migrate-to-work/nt-government-visa-nomination/eligibility</span>
+  <span class="what">Выпускники старше 35, учившиеся в NT (2 академических года), могут претендовать на 190 при наличии работы или оффера. NT DAMA: возраст до 55 для Skill Level 1–4.</span>
+</div>
+
+
+
+<div class="src">
+  <h3>Seek — вакансии Австралия</h3>
+  <span class="url">https://www.seek.com.au</span>
+  <span class="what">Основной источник вакансий. RSS-лент нет — использовать кнопку <b>Save this search</b> для алертов на почту. Раздел спонсорства: seek.com.au/visa-sponsorship-jobs</span>
+</div>
+
+<div class="src">
+  <h3>ANZSCO — классификатор профессий</h3>
+  <span class="url">https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations</span>
+  <span class="what">Официальное описание обязанностей по каждому коду. Группа 1336 — Supply, Distribution and Procurement Managers. Требование: бакалавр <b>или</b> 5 лет опыта.</span>
+</div>
+
+<div class="src">
+  <h3>VETASSESS — оценка квалификации</h3>
+  <span class="url">https://www.vetassess.com.au</span>
+  <span class="what">Оценивающий орган для 133612. Занимает 3–6 месяцев. Для 186 TRT не требуется, если уже была пройдена для 482.</span>
+</div>
+
+<div class="src">
+  <h3>Skilled Migrant Employment Register (WA)</h3>
+  <span class="url">https://migration.wa.gov.au/our-services-support/skilled-migrant-employment-register</span>
+  <span class="what">Бесплатный реестр: работодатели WA ищут в нём кандидатов. <b>Можно зарегистрироваться самому</b> — прямой канал к работодателям, обязательное условие для DAMA-эндорсмента с их стороны.</span>
+</div>
+
+<footer>
+  Все цифры требуют проверки на первоисточнике перед подачей — правила меняются ежемесячно.<br>
+  Сроки обработки — медианы для decision-ready заявок; для 5-го приоритета могут быть существенно дольше.<br>
+  Не проверено: наличие 133612 в списке WA DAMA · требуется ли PhD для конкретных вакансий Lecturer · концессия по зарплате в WA DAMA.
+</footer>
+
+
+</section>
+<section class="page" id="p-dama">
+
+
+<header>
+  <div class="eyebrow">Западная Австралия · проверено 17.08.2026 · migration.wa.gov.au</div>
+  <h1>DAMA</h1>
+  <p class="sub">Соглашение, по которому Западная Австралия может нанимать иностранцев на условиях мягче федеральных. Возраст до 55 вместо 45, опыт от 1 года вместо 2.</p>
+</header>
+
+<h2>Что это такое — простыми словами</h2>
+
+<div class="plain">
+  <span class="q">Что такое DAMA</span>
+  <p>Обычно правила приёма иностранных работников устанавливает федеральное правительство Австралии, и они одинаковы для всей страны. Но у регионов бывают свои нехватки кадров, которых нет в остальной Австралии.</p>
+  <p>DAMA — это договор между федеральным правительством и конкретным регионом. Регион говорит: «нам не хватает вот этих специалистов, разрешите нанимать их на смягчённых условиях». Правительство соглашается и подписывает соглашение на пять лет.</p>
+</div>
+
+<div class="plain">
+  <span class="q">Почему это важно именно вам</span>
+  <p>Федеральные правила ставят возрастной потолок 45 лет для получения ПМЖ через работодателя. DAMA поднимает его до 55.</p>
+  <p>Федеральные правила требуют 2 года опыта для рабочей визы. DAMA снижает до 1 года.</p>
+  <p>Это не другая виза — это те же визы 482 и 186, но с послаблениями.</p>
+</div>
+
+<div class="card warn">
+  <h3>Главное ограничение — вы не можете подать сами</h3>
+  <p style="margin:0">DAMA — это программа для работодателей, а не для работников. Прямая цитата с официального сайта: <em>«A DAMA is an employer-sponsored visa program and individual workers cannot apply for a visa independently»</em>.</p>
+  <p style="margin:10px 0 0">Вы не подаёте заявку на DAMA. Заявку подаёт компания, которая хочет вас нанять. Ваша задача — найти такую компанию и объяснить ей, что этот путь существует.</p>
+</div>
+
+<h2>Как это работает — цепочка</h2>
+
+<ol class="chain">
+  <li>
+    <div class="box">
+      <span class="who you">делаете вы</span>
+      <span class="t">Находите работодателя в Западной Австралии</span>
+      <span class="d">Компания должна работать в WA больше 12 месяцев и быть финансово устойчивой. Без этого шага дальше ничего не происходит.</span>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <span class="who emp">делает работодатель</span>
+      <span class="t">Регистрируется в Skilled Migrant Employment Register</span>
+      <span class="d">Бесплатный реестр. Обязательное условие для доступа к DAMA.</span>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <span class="who emp">делает работодатель</span>
+      <span class="t">Проводит Labour Market Testing</span>
+      <span class="d">Два объявления о вакансии, минимум 28 дней каждое, на признанных площадках. Нужно доказать, что австралийца на эту роль не нашли. Соцсети и обычные классифайды не принимаются.</span>
+      <span class="time">28+ дней</span>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <span class="who emp">делает работодатель</span>
+      <span class="t">Подаёт заявку на эндорсмент в Migration Services</span>
+      <span class="d">Пакет документов: финансовая отчётность, оргструктура, обоснование потребности, шаблон трудового договора. Пошлины нет.</span>
+      <span class="time">20 рабочих дней</span>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <span class="who emp">делает работодатель</span>
+      <span class="t">Заключает Labour Agreement с Home Affairs</span>
+      <span class="d">Эндорсмент действует 12 месяцев — в этот срок надо успеть. Соглашение обычно на 5 лет.</span>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <span class="who you">делаете вы</span>
+      <span class="t">Подаёте на визу 482 под DAMA</span>
+      <span class="d">Здесь работают концессии: опыт от 1 года, возраст не ограничен. Семья включается в заявку.</span>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <span class="who you">делаете вы</span>
+      <span class="t">Работаете у этого работодателя</span>
+      <span class="d">Перт — 3 года. Регион — 2 года.</span>
+      <span class="time">2–3 года</span>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <span class="who you">делаете вы</span>
+      <span class="t">Подаёте на 186 — постоянное место жительства</span>
+      <span class="d">Возрастной потолок 55 лет вместо 45. Labour Market Testing на этом этапе не требуется.</span>
+    </div>
+  </li>
+</ol>
+
+<h2>Что именно смягчается</h2>
+
+<table>
+  <tr><th>Условие</th><th>Обычные правила</th><th>Под DAMA</th></tr>
+  <tr>
+    <td><b>Возраст для ПМЖ (186)</b></td>
+    <td>до 45 лет</td>
+    <td class="g">до 55 лет</td>
+  </tr>
+  <tr>
+    <td><b>Опыт работы — виза 482</b></td>
+    <td>2 года</td>
+    <td class="g">1 год</td>
+  </tr>
+  <tr>
+    <td><b>Опыт работы — ПМЖ 186</b></td>
+    <td>—</td>
+    <td>Перт: 3 года<br>Регион: 2 года</td>
+  </tr>
+  <tr>
+    <td><b>Английский, Skill Level 1–2</b></td>
+    <td>IELTS 5.0 (482)<br>IELTS 6.0 (186)</td>
+    <td class="r">Концессии нет</td>
+  </tr>
+  <tr>
+    <td><b>Английский, Skill Level 3–4</b></td>
+    <td>то же</td>
+    <td class="g">IELTS 5.0 без минимума<br>по компонентам</td>
+  </tr>
+  <tr>
+    <td><b>Список профессий</b></td>
+    <td>CSOL, ~456 позиций</td>
+    <td class="g">Свой список,<br>~310 позиций в WA DAMA</td>
+  </tr>
+  <tr>
+    <td><b>Зарплата</b></td>
+    <td class="mono">не ниже CSIT</td>
+    <td class="mono">не ниже TSMIT<br><span style="color:var(--muted)">+ рыночная ставка</span></td>
+  </tr>
+</table>
+
+<div class="card note">
+  <h3>Важно про английский</h3>
+  <p style="margin:0">Procurement Manager — это Skill Level 1. Значит языковой концессии для вас <b>не будет</b>. Работают только возрастная концессия и концессия по опыту.</p>
+</div>
+
+<h2>Пять соглашений в Западной Австралии</h2>
+
+<p class="lede">В WA действует не одно соглашение, а пять. Четыре региональных и одно общее на весь штат. Если ваша профессия есть в региональном — работодатель обращается туда. Если нет — в общий WA DAMA.</p>
+
+<div class="reg">
+  <div class="r-card">
+    <h4>WA DAMA — весь штат</h4>
+    <span class="url">migration.wa.gov.au/our-services-support/designated-area-migration-agreement</span>
+    <span class="d">Включая Перт. ~310 профессий. Оператор — Migration Services. Уникально: другие DAMA покрывают только отдалённые районы.</span>
+  </div>
+  <div class="r-card">
+    <h4>Pilbara</h4>
+    <span class="url">https://www.rdapilbara.org.au/dama</span>
+    <span class="d">Карратха, Порт-Хедленд, Восточная Пилбара. Горнодобывающий регион.</span>
+  </div>
+  <div class="r-card">
+    <h4>Goldfields</h4>
+    <span class="url">https://www.ckb.wa.gov.au/business-development/designated-area-migration-agreement/dama.aspx</span>
+    <span class="d">Калгурли-Боулдер, Кулгарди, Эсперанс. Золотодобыча. Продлено до 31 декабря 2026.</span>
+  </div>
+  <div class="r-card">
+    <h4>Kimberley</h4>
+    <span class="url">https://www.ekcci.com.au/ek-dama/about-ek-dama/</span>
+    <span class="d">Уиндем, Брум, Холлс-Крик, Дерби.</span>
+  </div>
+  <div class="r-card">
+    <h4>South West</h4>
+    <span class="url">https://www.dardanup.wa.gov.au/our-shire/about-us/south-west-dama.aspx</span>
+    <span class="d">12 муниципалитетов. Сельское хозяйство, виноделие, гостиничный бизнес. Есть концессия 10% по зарплате при обосновании.</span>
+  </div>
+</div>
+
+<h2>Перт или регион</h2>
+
+<table>
+  <tr><th></th><th>Метро Перт (Категория 2)</th><th>Регион WA (Категория 3)</th></tr>
+  <tr>
+    <td><b>Постиндексы</b></td>
+    <td class="mono">6000–6038<br>6050–6083<br>6090–6182<br>6208–6211<br>6214<br>6556–6558</td>
+    <td class="mono">все остальные<br>в Западной Австралии</td>
+  </tr>
+  <tr>
+    <td><b>До ПМЖ</b></td>
+    <td>3 года</td>
+    <td class="g">2 года</td>
+  </tr>
+  <tr>
+    <td><b>Опыт для 186</b></td>
+    <td>3 года</td>
+    <td class="g">2 года</td>
+  </tr>
+  <tr>
+    <td><b>Список профессий</b></td>
+    <td>Skill Level 1–3 + немного 4</td>
+    <td class="g">шире: 1–4 + региональные</td>
+  </tr>
+  <tr>
+    <td><b>Ограничение</b></td>
+    <td class="r">мигранты не более 50%<br>от штата компании</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><b>Реклама вакансии</b></td>
+    <td>2 объявления</td>
+    <td>2 объявления, одно<br>с национальным охватом</td>
+  </tr>
+</table>
+
+<div class="card good">
+  <h3>Регион выгоднее по срокам</h3>
+  <p style="margin:0">ПМЖ за 2 года вместо 3, опыта нужно меньше, список профессий шире. Цена — жизнь вне Перта: Порт-Хедленд, Калгурли, Брум. Для семьи с детьми это отдельное решение.</p>
+</div>
+
+<h2>Что нужно проверить</h2>
+
+<div class="card warn">
+  <h3>Есть ли Procurement Manager (133612) в списке WA DAMA</h3>
+  <p>Это ключевой вопрос — без него вся конструкция не работает. Список из ~310 профессий не совпадает с федеральным CSOL, у DAMA свой.</p>
+  <p style="margin-bottom:0"><b>Как проверить:</b> открыть страницу WA DAMA, пролистать до раздела «Occupation filter», ввести в поле <span class="mono">Procurement</span>, нажать Apply. Либо скачать полный список кнопкой <span class="mono">Download CSV</span>.</p>
+</div>
+
+<div class="card note">
+  <h3>Есть ли концессия по зарплате</h3>
+  <p style="margin:0">На странице WA DAMA концессия по зарплате не указана — упоминается только требование не ниже TSMIT. В South West DAMA такая концессия есть (10% при обосновании). Стоит уточнить у Migration Services напрямую.</p>
+</div>
+
+<h2>Что можно сделать уже сейчас</h2>
+
+<div class="card key">
+  <h3>Зарегистрироваться в Skilled Migrant Employment Register</h3>
+  <p>Это реестр, в котором работодатели Западной Австралии ищут кандидатов. Бесплатно. Регистрация открыта для соискателей, а не только для компаний.</p>
+  <p style="margin-bottom:0"><b>Почему это важно:</b> вы не можете подать на DAMA сами, но можете сделать так, чтобы работодатели вас нашли. Это единственный прямой канал к компаниям WA, который вам доступен без оффера.</p>
+</div>
+
+<h2>Источники</h2>
+
+<div class="src">
+  <h3>WA DAMA — главная страница</h3>
+  <span class="url">https://migration.wa.gov.au/our-services-support/designated-area-migration-agreement</span>
+  <span class="what">Концессии, критерии эндорсмента, фильтр профессий, ссылка на CSV со списком. Всё по WA DAMA собрано здесь.</span>
+</div>
+
+<div class="src">
+  <h3>Пути миграции в WA — обзор</h3>
+  <span class="url">https://migration.wa.gov.au/moving-western-australia/migration-pathways-skilled-visas</span>
+  <span class="what">Все варианты для WA: DAMA, номинация штата (190/491), федеральные визы. Ссылки на все пять DAMA региона.</span>
+</div>
+
+<div class="src">
+  <h3>Skilled Migrant Employment Register</h3>
+  <span class="url">https://migration.wa.gov.au/our-services-support/skilled-migrant-employment-register</span>
+  <span class="what">Регистрация соискателя. Работодатели ищут здесь кандидатов.</span>
+</div>
+
+<div class="src">
+  <h3>Критерии эндорсмента — PDF</h3>
+  <span class="url">https://migration.wa.gov.au/sites/default/files/2025-07/wadama-eligibility-criteria-jul2025_TSMITupdate.pdf</span>
+  <span class="what">Полный документ с требованиями к работодателю. Полезно, чтобы понимать, что от компании потребуется.</span>
+</div>
+
+<div class="src">
+  <h3>DAMA на сайте Home Affairs</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/labour-agreements/types-of-labour-agreements/designated-area-migration-agreements-(dama)</span>
+  <span class="what">Федеральный взгляд на DAMA: как соглашения устроены, кто их заключает.</span>
+</div>
+
+<div class="src">
+  <h3>Контакты Migration Services</h3>
+  <span class="url">https://migration.wa.gov.au/contact</span>
+  <span class="what">Телефон +61 8 9224 6540 (опция 2). Email: migration@dtwd.wa.gov.au. Отвечают на вопросы по программе, но не дают миграционных консультаций.</span>
+</div>
+
+<footer>
+  Источник: migration.wa.gov.au, раздел Designated Area Migration Agreement. Проверено 17.08.2026.<br>
+  Не проверено: наличие кода 133612 в списке профессий WA DAMA · концессия по зарплате.<br>
+  DAR оставляет за собой право менять списки профессий и критерии в любой момент.
+</footer>
+
+
+</section>
+<section class="page" id="p-points">
+
+<header>
+  <div class="eyebrow">Балльный путь · виза 190 · Перт</div>
+  <h1>Второй путь: баллы</h1>
+  <p class="sub">Не требует работодателя. Требует Superior English, участия жены и номинации штата. Ведётся параллельно с поиском оффера — они не мешают друг другу.</p>
+</header>
+
+<h2>Где вы сейчас</h2>
+
+<div class="gauge">
+  <h3>55 баллов из нужных 85–95</h3>
+  <div class="bar">
+    <div class="zone" style="left:71%;right:0"></div>
+    <div class="fill" style="width:46%"></div>
+  </div>
+  <div class="lbl"><span>0</span><span>65 — минимум подачи</span><span>85–95 реальный проходной</span><span>120</span></div>
+</div>
+
+<table class="calc">
+  <tr><th>Категория</th><th>Ваши данные</th><th class="pts">Сейчас</th><th class="pts">Максимум</th></tr>
+  <tr><td>Возраст</td><td>38 лет — диапазон 33–39</td><td class="pts now">25</td><td class="pts">25</td></tr>
+  <tr><td>Английский</td><td>Сейчас 6.5 → нужен IELTS 8.0 / PTE 79+ по каждому компоненту</td><td class="pts now">0</td><td class="pts max">20</td></tr>
+  <tr><td>Опыт за рубежом</td><td>10+ лет — уже максимум</td><td class="pts now">15</td><td class="pts">15</td></tr>
+  <tr><td>Образование</td><td>MSc Warwick — уже максимум</td><td class="pts now">0</td><td class="pts max">15</td></tr>
+  <tr><td>Партнёр</td><td>Жена: skills assessment + Competent English</td><td class="pts now">0</td><td class="pts max">10</td></tr>
+  <tr><td>Номинация WA</td><td>190 в Перте — +5 (491 регион даёт +15, но Перт исключён)</td><td class="pts now">0</td><td class="pts max">5</td></tr>
+  <tr class="total"><td colspan="2">Итого</td><td class="pts now">55</td><td class="pts max">90</td></tr>
+</table>
+
+<div class="card note">
+  <h3>90 баллов — это нижняя граница коридора</h3>
+  <p style="margin:0">Проходной 85–95. Вы проходите, но без запаса. Уберите партнёрские баллы — 80, не проходите. Не получите номинацию — 85, впритык. Три условия должны сойтись одновременно.</p>
+</div>
+
+<h2>Три рычага, которые всё решают</h2>
+
+<div class="fork">
+  <div class="f a">
+    <h4>Английский Superior</h4>
+    <span class="pt">+20</span>
+    <p>IELTS 8.0 или PTE 79+ <b>по каждому компоненту</b>, не в среднем. С вашего 6.5 — скачок на два уровня.</p>
+    <p>Это единственный рычаг полностью под вашим контролем. Работает в обоих путях: в балльном даёт очки, в работодательском — проходит собеседование.</p>
+  </div>
+  <div class="f a">
+    <h4>Партнёрские баллы</h4>
+    <span class="pt">+10</span>
+    <p>Жена: положительный skills assessment по своей профессии + Competent English (IELTS 6.0 по каждому компоненту).</p>
+    <p>Только английский без skills assessment — <b>5 баллов, не 10</b>. Подробный план на вкладке «План жены».</p>
+  </div>
+  <div class="f b">
+    <h4>Номинация WA</h4>
+    <span class="pt">+5</span>
+    <p>Западная Австралия должна номинировать вашу профессию по списку WASMOL.</p>
+    <p><b>Не проверено:</b> есть ли 133612 Procurement Manager в WASMOL Schedule 1 или 2. Без этого весь балльный путь не стартует.</p>
+  </div>
+</div>
+
+<h2>Как это работает</h2>
+
+<ol class="step2">
+  <li><div class="box"><span class="t">Skills assessment — VETASSESS</span>
+    <span class="d">Оценка вашей квалификации по коду 133612. Обязательна до подачи EOI.</span>
+    <span class="time">3–6 месяцев</span></div></li>
+  <li><div class="box"><span class="t">Английский Superior</span>
+    <span class="d">PTE 79+ по каждому компоненту. Параллельно — жена сдаёт на 6.0.</span>
+    <span class="time">3–6 месяцев подготовки</span></div></li>
+  <li><div class="box"><span class="t">Подача EOI в SkillSelect</span>
+    <span class="d">Бесплатно. Профиль просто лежит в системе и ждёт. Указать Western Australia как предпочтительный штат.</span>
+    <span class="time">бессрочно</span></div></li>
+  <li><div class="box"><span class="t">Отдельная заявка на номинацию WA</span>
+    <span class="d">Через портал Migration WA. Проверить требования Schedule 1 или 2 — они различаются по опыту и наличию контракта.</span></div></li>
+  <li><div class="box"><span class="t">Приглашение от Home Affairs</span>
+    <span class="d">Приходит, если вы прошли по баллам в очередном раунде. Не гарантировано.</span>
+    <span class="time">срок непредсказуем</span></div></li>
+  <li><div class="box"><span class="t">Подача на визу 190</span>
+    <span class="d">ПМЖ сразу, без привязки к работодателю. Обязательство жить в WA.</span></div></li>
+</ol>
+
+<div class="card key">
+  <h3>Почему это не заменяет поиск работы</h3>
+  <p>Балльный путь не требует оффера, но и не гарантирует результат — вы соревнуетесь в очереди с другими кандидатами, и WA приоритизирует свои дефицитные сектора.</p>
+  <p style="margin-bottom:0">Подача EOI ничего не стоит и ничему не мешает. Правильная тактика — вести оба пути одновременно: EOI лежит в системе, вы ищете работодателя.</p>
+</div>
+
+<div class="card warn">
+  <h3>Что проверить в первую очередь</h3>
+  <p style="margin:0">Есть ли <b>133612 Procurement Manager</b> в WASMOL. Проверяется на migration.wa.gov.au в разделе State Nominated Migration Program. Если профессии там нет — вся эта вкладка неактуальна, и остаётся только путь через работодателя.</p>
+</div>
+
+<h2>Источники</h2>
+
+<div class="src">
+  <h3>WA State Nominated Migration Program</h3>
+  <span class="url">https://migration.wa.gov.au/services/skilled-migration-wa/state-nominated-migration-program</span>
+  <span class="what">Списки WASMOL Schedule 1 и 2, Graduate Occupation List, требования по стримам, данные раундов приглашений.</span>
+</div>
+
+<div class="src">
+  <h3>SkillSelect — подача EOI</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect</span>
+  <span class="what">Система подачи Expression of Interest. Бесплатно, профиль хранится 2 года.</span>
+</div>
+
+<div class="src">
+  <h3>Виза 190 Skilled Nominated</h3>
+  <span class="url">https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190</span>
+  <span class="what">Требования, возрастной порог, обязательства перед штатом.</span>
+</div>
+
+</section>
+
+<section class="page" id="p-spouse">
+
+<header>
+  <div class="eyebrow">Партнёрские баллы · до +10 очков</div>
+  <h1>План для жены</h1>
+  <p class="sub">Разница между 5 и 10 баллами — это разница между 85 и 90. При проходном 85–95 эти пять очков решают исход.</p>
+</header>
+
+<h2>Два варианта — выбрать по её профессии</h2>
+
+<div class="fork">
+  <div class="f a">
+    <h4>Вариант A — полные баллы</h4>
+    <span class="pt">+10</span>
+    <p><b>Что нужно:</b> положительный skills assessment по её профессии + Competent English (IELTS 6.0 по каждому компоненту).</p>
+    <p><b>Условие:</b> её профессия должна быть в списке допустимых (та же CSOL), и у неё должны быть образование и опыт по ней.</p>
+    <p><b>Срок:</b> 4–8 месяцев на оба этапа параллельно.</p>
+  </div>
+  <div class="f b">
+    <h4>Вариант B — половина</h4>
+    <span class="pt">+5</span>
+    <p><b>Что нужно:</b> только Competent English (IELTS 6.0 по каждому компоненту). Skills assessment не требуется.</p>
+    <p><b>Когда подходит:</b> если её профессии нет в списке, или нет подтверждённого опыта, или времени мало.</p>
+    <p><b>Срок:</b> 2–4 месяца на подготовку и сдачу.</p>
+  </div>
+</div>
+
+<div class="card note">
+  <h3>Что нужно выяснить до старта</h3>
+  <p style="margin:0">Какая у жены профессия по диплому, сколько лет опыта по ней, и есть ли этот код в CSOL. Без этих трёх ответов нельзя выбрать между A и B — и нельзя понять, реальны ли 90 баллов или потолок 85.</p>
+</div>
+
+<h2>Пошаговый план</h2>
+
+<ol class="step2">
+  <li><div class="box"><span class="t">Определить её код ANZSCO</span>
+    <span class="d">Найти профессию в классификаторе по фактическим обязанностям, не по названию должности в трудовой. Проверить, есть ли код в Core Skills Occupation List.</span>
+    <span class="time">1 неделя</span></div></li>
+
+  <li><div class="box"><span class="t">Решить: A или B</span>
+    <span class="d">Код есть в списке и опыт подтверждается документами → вариант A. Нет → вариант B, только английский.</span></div></li>
+
+  <li><div class="box"><span class="t">Записаться на IELTS General или PTE</span>
+    <span class="d">Нужен уровень Competent: <b>6.0 по каждому компоненту</b>, не в среднем. Это заметно ниже вашего целевого 79+ — задача проще.</span>
+    <span class="time">дата через 2–3 месяца</span></div></li>
+
+  <li><div class="box"><span class="t">Подготовка к экзамену</span>
+    <span class="d">6.0 по всем компонентам — уровень уверенного B2. Обычно достижимо за 2–3 месяца регулярных занятий, если база есть.</span>
+    <span class="time">2–3 месяца</span></div></li>
+
+  <li><div class="box"><span class="t">Параллельно — документы для skills assessment</span>
+    <span class="d">Только для варианта A: диплом с приложением, переводы, трудовая, справки с описанием обязанностей, payslips. Оценивающий орган зависит от профессии.</span>
+    <span class="time">1–2 месяца на сбор</span></div></li>
+
+  <li><div class="box"><span class="t">Подать на skills assessment</span>
+    <span class="d">Только вариант A. Стоимость и срок зависят от органа: VETASSESS ~3–6 месяцев, другие быстрее.</span>
+    <span class="time">3–6 месяцев</span></div></li>
+
+  <li><div class="box"><span class="t">Сдать экзамен</span>
+    <span class="d">Результат действителен 3 года. Важно: он должен быть валиден на момент приглашения, а не только на момент подачи EOI.</span></div></li>
+
+  <li><div class="box"><span class="t">Внести её данные в ваш EOI</span>
+    <span class="d">Партнёрские баллы заявляются в вашей заявке. Все документы должны быть готовы до подачи.</span></div></li>
+</ol>
+
+<h2>Что важно знать заранее</h2>
+
+<div class="card">
+  <h3>Требования к партнёру</h3>
+  <p style="margin-bottom:6px">Чтобы баллы засчитали, партнёр должен:</p>
+  <ul class="plain-list">
+    <li>быть моложе 45 лет на момент приглашения</li>
+    <li>иметь профессию в том же списке, что применим к вашей визе</li>
+    <li>подавать заявку вместе с вами как член семьи</li>
+    <li>не быть гражданином или ПМЖ Австралии</li>
+  </ul>
+</div>
+
+<div class="card note">
+  <h3>Английский жены не влияет на визу через работодателя</h3>
+  <p style="margin:0">Для 482 и 186 партнёрские баллы не существуют вообще — там баллов нет. Но её английский всё равно понадобится: для жизни, работы и школы детей. Так что это не потерянные усилия в любом сценарии.</p>
+</div>
+
+<div class="card key">
+  <h3>Реалистичная оценка</h3>
+  <p>Вариант B (только английский, +5) — задача на 2–4 месяца, выполнимая почти наверняка.</p>
+  <p style="margin-bottom:0">Вариант A (+10) — 4–8 месяцев и зависит от того, попадает ли её профессия в список. Разница в 5 баллов может решить исход, но начинать стоит с английского в любом случае: он нужен для обоих вариантов.</p>
+</div>
+
+</section>
+
+</div>
+<script>
+const btns=document.querySelectorAll('nav.site button');
+const pages=document.querySelectorAll('.page');
+function show(id){
+  pages.forEach(p=>p.classList.toggle('active',p.id==='p-'+id));
+  btns.forEach(b=>b.classList.toggle('on',b.dataset.p===id));
+  try{localStorage.setItem('au_tab',id)}catch(e){}
+  window.scrollTo(0,0);
+}
+btns.forEach(b=>b.addEventListener('click',()=>show(b.dataset.p)));
+let start='strategy';
+try{const s=localStorage.getItem('au_tab'); if(s) start=s;}catch(e){}
+show(start);
+
+// чекбоксы стратегии
+document.querySelectorAll('.check input').forEach(function(box){
+  var k='rl_'+box.dataset.k;
+  try{ if(localStorage.getItem(k)==='1') box.checked=true; }catch(e){}
+  box.addEventListener('change',function(){
+    try{ localStorage.setItem(k, box.checked?'1':'0'); }catch(e){}
+  });
+});
+</script>
+</body>
+</html>
